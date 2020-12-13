@@ -14,8 +14,13 @@ Router.map(function() {
   this.route('destroy');
   this.route('install');
   this.route('build');
-  this.route('project-tasks');
   this.route('new-project');
   this.route('dependencies');
   this.route('project-update');
+  this.route('tasks');
+  this.route('files');
+  this.route('packages');
+  this.route('addons');
+  this.route('info');
+  this.route('settings');
 });
