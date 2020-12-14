@@ -4,7 +4,7 @@
       <h1 class="subnav-main-title">Tasks</h1>
     </div>
     <div class="subnav-list">
-      <LinkTo class="subnav-item border-t" @route="tasks.serve" >
+      <LinkTo class="subnav-item" @route="tasks.serve" >
         <svg class="subnav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
@@ -59,8 +59,8 @@
     </div>
   </div>
 
-<div>
+<main class="main">
   {{outlet}}
-</div>
+</main>
 
 </div>
