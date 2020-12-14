@@ -71,10 +71,45 @@
     @apply h-5 w-5 text-white
   }
 
+  /* ---SUB-NAVIGATION--- */
+
+  .subnav {
+    @apply h-full  pt-10 bg-subnav shadow
+  }
+
+  .subnav-main-title {
+    @apply mb-10 px-8 text-xl
+  }
+
+  .subnav-list{
+    @apply flex flex-col
+  }
+  
+
+  .subnav-item {
+    @apply flex items-center py-4 px-2 bg-subnavLink border-b border-gray border-opacity-40
+  }
+
+  .subnav-icon {
+    @apply h-6 text-gray px-3
+  }
+
+  .subnav-title {
+    @apply text-gray font-bold block
+  }
+
+  .subnav-text {
+    @apply text-gray text-xs
+  }
+
   /* ---MAIN--- */
 
   .main {
-    @apply flex flex-col px-12 py-10 max-h-screen overflow-hidden
+    @apply flex flex-col p-12 max-h-screen overflow-hidden
+  }
+
+  .main-split {
+    @apply grid grid-cols-split
   }
 
   /* ---HEADER--- */
@@ -94,7 +129,7 @@
   /* --MAIN-INNER-- */
 
   .main-inner {
-    @apply w-full max-h-screen
+    @apply w-full
   }
 
   /* --CARD-- */
@@ -104,11 +139,11 @@
   }
 
   .card-header {
-    @apply flex justify-between items-center h-10 px-6 py-2 border-b border-gray-light
+    @apply flex justify-between items-center h-10 px-6 py-2 shadow-sm z-10
   }
 
   .card-title {
-    @apply font-light text-gray-dark text-sm
+    @apply font-light text-gray-dark text-xs
   }
 
   .card-icon {
@@ -130,16 +165,15 @@
   }
 
   .article-title {
-    @apply font-bold text-gray text-2xl mb-1
+    @apply font-bold text-gray mb-1
   }
 
   .article-date {
-    @apply inline-block text-sm border border-gray-light rounded-full px-4 text-gray mb-3
+    @apply inline-block text-xs border border-gray-light bg-gray-lightest rounded-full px-4 text-gray mb-3
   }
 
   .article-summary {
-    @apply font-light opacity-50
+    @apply font-light opacity-50 text-sm
   }
-
 
 }
