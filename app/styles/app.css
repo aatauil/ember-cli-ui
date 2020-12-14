@@ -55,7 +55,7 @@
 
   .group--end {
     @apply justify-end
-  } */
+  }
  
   /* ---NAVIGATION--- */
 
@@ -87,7 +87,7 @@
   
 
   .subnav-item {
-    @apply flex items-center py-4 px-2 bg-subnavLink border-b border-gray border-opacity-40
+    @apply flex items-center py-4 px-2 bg-subnavLink mb-1
   }
 
   .subnav-icon {
@@ -125,6 +125,7 @@
   .header-emoji {
     @apply text-2xl ml-2
   }
+  
 
   /* --MAIN-INNER-- */
 
@@ -147,7 +148,7 @@
   }
 
   .card-icon {
-    @apply h-6 text-gray-dark mr-3
+    @apply h-5 text-gray-dark mr-3
   }
 
   .card-content {
@@ -175,5 +176,42 @@
   .article-summary {
     @apply font-light opacity-50 text-sm
   }
+
+  /* TERMINAL */
+
+  .card-terminal {
+    @apply bg-gray-darkest rounded-lg py-3 shadow-lg
+  }
+
+  .card-header-terminal {
+    @apply flex justify-between items-center pb-3 px-6 border-b border-gray-dark
+  }
+
+  .card-icon-terminal {
+    @apply h-6 text-gray-light mr-3
+  }
+
+  .card-title-terminal {
+    @apply text-white text-sm font-light text-gray-light
+  }
+  
+  .card-content-terminal {
+    @apply bg-gray-darkest px-6 mt-3
+  }
+
+  /* BUTTON */
+
+  .btn-run {
+    @apply px-5 py-2 border rounded
+  }
+
+  .btn-info {
+    @apply px-5 py-2 border rounded ml-2
+  }
+
+  .btn-info-icon {
+    @apply h-6 w-6
+  }
+
 
 }
