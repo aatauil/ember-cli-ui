@@ -35,6 +35,13 @@
     @apply grid grid-cols-layout h-screen w-screen bg-layout 
   }
 
+  /* ---GRID--- */
+
+  .grid-tasks-default {
+    @apply grid grid-cols-4 grid-rows-4 gap-5
+  }
+
+
   /* ---SHARED--- */
 
   .group-col {
@@ -130,13 +137,13 @@
   /* --MAIN-INNER-- */
 
   .main-inner {
-    @apply w-full
+    @apply w-full h-full
   }
 
   /* --CARD-- */
 
   .card {
-    @apply flex flex-col w-1/4 bg-white rounded-lg max-h-card
+    @apply flex flex-col bg-white rounded-lg max-h-card
   }
 
   .card-header {
