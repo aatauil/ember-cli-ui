@@ -19,7 +19,10 @@ Router.map(function() {
     this.route('test');
     this.route('build');
   });
-  this.route('files');
+  this.route('files', function() {
+    this.route('destroy');
+    this.route('generate');
+  });
   this.route('packages');
   this.route('addons');
   this.route('info');
