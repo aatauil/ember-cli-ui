@@ -1,0 +1,10 @@
+<label for="blueprint">Blueprint: </label>
+<select id="blueprint" {{on "change" this.updateBlueprint}}>
+  {{#each this.blueprints as |b|}}
+  <option value={{b.value}}>{{b.title}}</option>
+{{/each}}
+</select>
+<label for="name">Name: </label>
+<Input id="name" type="text" placeholder="hello-world" @value={{this.name}}/>
+<button type="button" {{on "click" this.runGenerate}}> Generate</button>
+<Terminal @command={{this.command}} @task="generate"/>
