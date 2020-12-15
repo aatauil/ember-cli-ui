@@ -23,10 +23,8 @@
   </div>
 </div>
 
-<div class="main-inner">
-
-  <div class="group-row">
-    <div class="card">
+<div class="main-inner grid-tasks-default">
+    <div class="card col-span-1 row-span-2">
       <div class="card-header">
         <div class="group-row group-center">
           <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -49,7 +47,7 @@
 
       </div>
     </div>
-    <div class="card-terminal">
+    <div class="card-terminal  col-span-3 row-span-4">
       <div class="card-header-terminal">
         <div class="group-row group-center">
           <svg class="card-icon-terminal" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -73,5 +71,4 @@
         <Terminal @command={{this.command}} @task="serve" @callback={{this.socketCallback}} />
       </div>
     </div>
-  </div>
 </div>
