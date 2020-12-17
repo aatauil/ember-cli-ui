@@ -23,7 +23,10 @@ Router.map(function() {
     this.route('destroy');
     this.route('generate');
   });
-  this.route('packages');
+  this.route('packages', function() {
+    this.route('main');
+    this.route('development');
+  });
   this.route('addons');
   this.route('info');
   this.route('settings');
