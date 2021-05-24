@@ -1,10 +1,10 @@
 {{log @type}}
 {{#if (eq @type "patch")}}
-  <span class="semver-badge patch">PATCH</span>
+  <div class="w-24 text-center bg-green-400 font-medium text-green-900 py-1 text-xs rounded-full">PATCH</div>
   {{else if (eq @type "minor")}}
-  <span class="semver-badge minor">MINOR</span>
+  <div class="w-24 text-center bg-yellow-400 font-medium text-yellow-900 py-1 text-xs rounded-full">MINOR</div>
   {{else if (eq @type "major")}}
-  <span class="semver-badge breaking">BREAKING</span>
+  <div class="w-24 text-center bg-red-400 font-medium text-red-900 py-1 text-xs rounded-full">BREAKING</div>
 {{else}}
-  <span>-</span>
+  <div>-</div>
 {{/if}}

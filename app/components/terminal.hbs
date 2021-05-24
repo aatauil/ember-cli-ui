@@ -1,1 +1,24 @@
-<div id="terminal" {{create-xterm command=@command task=@task callback=@callback}}></div>
+<div class="terminal border border-gray-200">
+
+  {{!-- TOOLBAR --}}
+  <div class="terminal-toolbar">
+    <div class="flex items-center space-x-2 text-sm text-gray-500">
+      <i class="ri-terminal-line"></i>
+      <span>Output</span>
+    </div>
+
+    <div class="terminal-toolbar-actions">
+      <button type="button" class="flex items-center space-x-1 hover:bg-gray-100">
+        <i class="ri-delete-bin-2-line text-sm text-gray-400 py-1 px-2"></i>
+      </button>
+      <button type="button" class="flex items-center space-x-1 hover:bg-gray-100">
+        <i class="ri-clipboard-line text-sm text-gray-400 py-1 px-2"></i>
+      </button>
+    </div>
+  </div>
+
+  {{!-- TERMINAL --}}
+  <div class="terminal-box">
+      <div id="terminal" class="h-full" {{create-xterm command=@command task=@task callback=@callback}}></div>
+  </div>
+</div>
