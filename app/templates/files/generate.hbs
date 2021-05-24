@@ -1,10 +1,99 @@
-<label for="blueprint">Blueprint: </label>
-<select id="blueprint" {{on "change" this.updateBlueprint}}>
-  {{#each this.blueprints as |b|}}
-  <option value={{b.value}}>{{b.title}}</option>
-{{/each}}
-</select>
-<label for="name">Name: </label>
-<Input id="name" type="text" placeholder="hello-world" @value={{this.name}}/>
-<button type="button" {{on "click" this.runGenerate}}> Generate</button>
-<Terminal @command={{this.command}} @task="generate"/>
+<div class="gen">
+  <div class="gen-inner">
+
+    {{!-- PAGE HEADER --}}
+    <div class="header p-3 mb-0 border-b border-gray-200">
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded">
+        <i class="ri-file-add-line text-gray-600"></i>
+        </div>
+        <h1 class="header-title text-xl leading-tight">Generate</h1>
+      </div>
+    </div>
+
+    {{!-- HORIRZONTAL SPLIT VIEW | left - right --}}
+    <div class="gen-split">
+
+      {{!-- GENERATE SIDEBAR + LIST --}}
+      <div class="gen-split-left">
+        <div class="gen-list">
+
+          {{!-- component --}}
+          <GenerateCard
+            @command="Component"
+            @description="The template of resuable UI element"
+          />
+
+          {{!-- route --}}
+          <GenerateCard
+            @command="Route"
+            @description="An individual route"
+          />
+
+          {{!-- controller --}}
+          <GenerateCard
+            @command="Controller"
+            @description="Routeable object that receives the route its model"
+          />
+
+          {{!-- component-class --}}
+          <GenerateCard
+            @command="Component-class"
+            @description="The js file of a reusable UI element"
+          />
+
+          {{!-- service --}}
+          <GenerateCard
+            @command="Service"
+            @description="Object that lives for the duration of the application"
+          />
+
+          {{!-- helper --}}
+          <GenerateCard
+            @command="Helper"
+            @description="A helper function you can easily use in your templates"
+          />
+
+          {{!-- model --}}
+          <GenerateCard
+            @command="Model"
+            @description="Object representing your underlying data"
+          />
+
+          {{!-- util --}}
+          <GenerateCard
+            @command="Util"
+            @description="Needs description"
+          />
+
+          {{!-- mixin --}}
+          <GenerateCard
+            @command="Mixin"
+            @description="Needs description"
+          />
+
+          {{!-- adapter --}}
+          <GenerateCard
+            @command="Adapter"
+            @description="Needs description"
+          />
+
+        </div>
+      </div>
+
+      {{!-- SPLIT VIEW RIGHT --}}
+      <div class="gen-split-right">
+        <div class="flex justify-between py-2">
+          <h1 class="text-lg">Component</h1>
+          <div class="bg-gray-200 px-4 py-1 text-sm rounded font-medium text-gray-700">
+            docs
+          </div>
+        </div>
+        <div>
+          <Terminal @command={{this.command}} @task="generate" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

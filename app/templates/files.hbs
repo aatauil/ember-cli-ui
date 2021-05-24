@@ -1,40 +1,38 @@
-<div class="main-split">
-  <div class="subnav">
-    <div class="group-col">
-      <h1 class="subnav-main-title">Files</h1>
+<div class="side-nav">
+
+  {{!-- SIDE-NAV-HEAD --}}
+  <div class="side-nav-head">
+    <div class="side-nav-icon-square">
+      <i class="ri-clipboard-line side-nav-icon"></i>
     </div>
-    <div class="subnav-list">
-      <LinkTo class="subnav-item" @route="files.generate" >
-        <svg class="subnav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <div class="group-col">
-          <div class="subnav-title">
-            Generate
-          </div>
-          <div class="subnav-text">
-            Create, destroy or replace files
-          </div>
-        </div>
-      </LinkTo>
-      <LinkTo class="subnav-item" @route="files.destroy" >
-        <svg class="subnav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <div class="group-col">
-          <div class="subnav-title">
-            Destroy
-          </div>
-          <div class="subnav-text">
-            Remove files
-          </div>
-        </div>
-      </LinkTo>
-    </div>
+    <span class="side-nav-head-title">Files</span>
   </div>
 
-<main class="main">
-  {{outlet}}
-</main>
+  {{!-- SIDE-NAV-LIST --}}
+  <div class="side-nav-list">
 
+      {{!-- generate --}}
+    <LinkTo class="side-nav-link" @route="files.generate">
+      <i class="ri-file-add-line side-nav-link-icon"></i>
+      <div class="flex flex-col">
+        <span class="side-nav-link-title">Generate</span>
+        <span class="side-nav-link-text">Create or replace files</span>
+      </div>
+    </LinkTo>
+
+      {{!-- destroy --}}
+    <LinkTo class="side-nav-link" @route="files.destroy">
+      <i class="ri-file-reduce-line side-nav-link-icon"></i>
+      <div class="flex flex-col">
+        <span class="side-nav-link-title">Destroy</span>
+        <span class="side-nav-link-text">Remove files</span>
+      </div>
+    </LinkTo>
+
+  </div>
 </div>
+
+{{!-- INDIVIUAL FILE ACTION PAGE --}}
+  {{outlet}}
+
+

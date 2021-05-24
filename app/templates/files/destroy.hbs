@@ -1,10 +1,20 @@
-<label for="blueprint">Blueprint: </label>
-<select id="blueprint" {{on "change" this.updateBlueprint}}>
-  {{#each this.blueprints as |b|}}
-  <option value={{b.value}}>{{b.title}}</option>
-{{/each}}
-</select>
-<label for="name">Name: </label>
-<Input id="name" type="text" placeholder="hello-world" @value={{this.name}}/>
-<button type="button" {{on "click" this.runDestroy}}> Destroy</button>
-<Terminal @command={{this.command}} @task="destroy"/>
+<div class="gen">
+  <div class="gen-inner">
+
+    {{!-- PAGE HEADER --}}
+    <div class="header p-3 mb-0 border-b border-gray-200">
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded">
+        <i class="ri-file-reduce-line text-gray-600"></i>
+        </div>
+        <h1 class="header-title text-xl leading-tight">Destroy</h1>
+      </div>
+    </div>
+
+    <div class="flex-1 h-full bg-gray-100">
+
+    </div>
+  </div>
+</div>
+
+

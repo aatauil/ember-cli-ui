@@ -1,6 +1,23 @@
-<h2>Project Dependencies</h2>
-<p>Your project's dependencies and dev dependencies are listed here.</p>
-<h3>Dependencies</h3>
-<DepsList @deps={{deps}} @type=""/>
-<h3>Dev Dependencies</h3>
-<DepsList @deps={{deps}} @type="dev"/>
+<div class="dep">
+  <div class="dep-inner">
+
+    {{!-- PAGE HEADER --}}
+    <div class="deps-header">
+      <div class="deps-header-inner">
+        <h1 class="deps-header-title">Dependencies</h1>
+      </div>
+    </div>
+
+    {{!-- DEPENDENCY TYPES LIST --}}
+    <div class="dep-nav">
+      <div class="dep-nav-list">
+        <button type="button" class="dep-nav-list-item {{if (eq this.type undefined) 'active' }}" {{on 'click' (fn (mut this.type) undefined)}}>Main</button>
+        <button type="button" class="dep-nav-list-item {{if (eq this.type 'dev') 'active' }}" {{on 'click' (fn (mut this.type) 'dev')}}>Development</button>
+        <button type="button" class="dep-nav-list-item {{if (eq this.type 'peer') 'active' }}" {{on 'click' (fn (mut this.type) 'peer')}}>Peer</button>
+      </div>
+    </div>
+
+    {{!-- DEPENDENCY LIST --}}
+    <DepsList @type={{this.type}}/>
+  </div>
+</div>

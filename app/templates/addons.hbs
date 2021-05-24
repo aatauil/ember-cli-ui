@@ -1,1 +1,37 @@
-{{outlet}}
+<div class="addons">
+  <div class="addons-inner">
+
+    {{!-- PAGE HEADER --}}
+    <div class="header">
+      <div class="header-head">
+        <h1 class="header-title text-white">Addons</h1>
+      </div>
+    </div>
+
+    {{!-- INSTALLED ADDONS --}}
+    <div class="addons-installed">
+      <h2 class="text-gray-400">Installed</h2>
+      <div class="flex flex-wrap py-2">
+        {{#each this.installedAddons as |addon|}}
+          <div class="bg-black bg-opacity-20 rounded-lg shadow-inner px-4 py-2 mr-2 mb-2">
+            <span class="text-white font-medium ">{{addon.name}}</span>
+            <img src="https://emberobserver.com/badges/{{addon.name}}.svg" alt="badge">
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- RECOMMENDED ADDONS --}}
+    <div class="addons-recommended">
+      <h2 class="text-gray-400">Recommended</h2>
+      <div class="flex flex-wrap py-2">
+        {{#each this.recommendedAddons as |addon|}}
+            <div class="bg-black bg-opacity-20 rounded-lg shadow-inner px-4 py-2 mr-2 mb-2">
+              <span class="text-white font-medium ">{{addon.name}}</span>
+              <img src="https://emberobserver.com/badges/{{addon.name}}.svg" alt="badge">
+            </div>
+          {{/each}}
+        </div>
+    </div>
+  </div>
+</div>
