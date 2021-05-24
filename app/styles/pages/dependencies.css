@@ -1,0 +1,40 @@
+@layer components {
+
+  .dep {
+    @apply flex-1 max-h-screen bg-gray-800 overflow-hidden
+  }
+
+  .dep-inner {
+    @apply p-12 w-full max-w-5xl mx-auto max-h-screen overflow-hidden flex flex-col
+  }
+
+  .deps-header {
+    @apply flex justify-between items-center w-full mb-12
+  }
+
+  .deps-header-inner {
+    @apply flex flex-col
+  }
+
+  .deps-header-title {
+    @apply text-5xl font-bold text-white
+  }
+
+  .dep-nav {
+    @apply pb-5 border-b border-gray-700 sm:pb-0
+  }
+
+  .dep-nav-list {
+    @apply -mb-px flex space-x-8
+  }
+
+  .dep-nav-list-item {
+    @apply border-transparent text-gray-500 hover:text-gray-100 hover:border-gray-300 whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm
+  }
+
+  .dep-nav-list-item.active {
+    @apply border-blue-500 text-blue-500 pb-4 px-1 border-b-2 font-medium text-sm
+  }
+
+
+}

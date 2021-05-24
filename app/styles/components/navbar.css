@@ -1,0 +1,56 @@
+@layer components {
+
+  /* ---NAVIGATION--- */
+  .navbar {
+    @apply flex flex-col justify-between items-center h-full p-4 bg-gray-800 border-r border-gray-700
+  }
+
+  .nav-item {
+    @apply h-12 w-12 border my-2 rounded border-gray-700 flex items-center justify-center hover:bg-gray-700
+  }
+
+  .nav-icon {
+    @apply text-white leading-none text-lg
+  }
+
+  /* SIDE-NAV */
+  .side-nav {
+    @apply h-full bg-white border-r border-gray-200 w-72
+  }
+
+  .side-nav-head {
+    @apply flex items-center border-b p-3 space-x-3 border-gray-200
+  }
+
+  .side-nav-head-title {
+    @apply text-lg text-gray-700
+  }
+
+  .side-nav-icon-square {
+    @apply w-10 h-10 bg-gray-100 flex items-center justify-center rounded
+  }
+
+  .side-nav-icon {
+    @apply text-gray-600
+  }
+
+  .side-nav-list {
+    @apply flex flex-col space-y-2
+  }
+
+  .side-nav-link {
+    @apply flex items-center py-3 text-gray-700 hover:bg-gray-100 space-x-3 pl-4
+  }
+
+  .side-nav-link-icon {
+    @apply text-xl text-gray-700
+  }
+
+  .side-nav-link-title {
+    @apply text-gray-700 font-bold block text-sm
+  }
+
+  .side-nav-link-text {
+    @apply text-gray-500 text-xs
+  }
+}

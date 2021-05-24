@@ -1,0 +1,10 @@
+@layer components {
+
+  .addons {
+    @apply flex-1 max-h-screen bg-gray-800 overflow-hidden
+  }
+
+  .addons-inner {
+    @apply p-12
+  }
+}

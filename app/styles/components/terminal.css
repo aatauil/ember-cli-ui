@@ -1,0 +1,17 @@
+@layer components {
+  .terminal {
+    @apply flex flex-col h-full bg-white p-2
+  }
+
+  .terminal-toolbar {
+    @apply flex items-center justify-between
+  }
+
+  .terminal-toolbar-actions{
+    @apply flex items-center space-x-2
+  }
+
+  .terminal-box {
+    @apply flex-1
+  }
+}

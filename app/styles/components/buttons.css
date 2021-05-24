@@ -1,0 +1,5 @@
+@layer components {
+  .btn-default {
+    @apply rounded-full bg-gray-800 px-10 py-2 text-white text-sm
+  }
+}

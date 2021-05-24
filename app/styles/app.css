@@ -1,9 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* TAILWIND */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,300&display=swap');
 
+/* PAGES */
+@import "./pages/dashboard.css";
+@import "./pages/dependencies.css";
+@import "./pages/addons.css";
+@import "./pages/files/generate.css";
+@import "./pages/tasks/serve.css";
+@import "./pages/tasks/test.css";
+@import "./pages/tasks/lint.css";
+@import "./pages/tasks/build.css";
+
+/* COMPONENTS */
+@import "./components/navbar.css";
+@import "./components/header.css";
+@import "./components/buttons.css";
+@import "./components/terminal.css";
+
+/*
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -20,19 +38,13 @@
  ::-webkit-scrollbar-track{
   background: #ffffff;
   border-radius: 7px;
- }
- 
-@layer base {
-  h1 {
-    @apply text-5xl font-bold text-gray-darkest
-  }
+ } */
 
-}
 
 @layer components {
 
   .layout {
-    @apply grid grid-cols-layout h-screen w-screen bg-layout 
+    @apply flex h-screen w-screen bg-gray-100
   }
 
   /* ---GRID--- */
@@ -63,76 +75,7 @@
   .group--end {
     @apply justify-end
   }
- 
-  /* ---NAVIGATION--- */
 
-  .navbar {
-    @apply flex flex-col justify-between items-center col-span-1 h-full px-2 py-4 bg-navbar
-  }
-
-  .nav-item {
-    @apply h-auto w-auto border p-3 my-2 rounded border-gray-dark
-  }
-
-  .nav-icon {
-    @apply h-5 w-5 text-white
-  }
-
-  /* ---SUB-NAVIGATION--- */
-
-  .subnav {
-    @apply h-full  pt-10 bg-subnav shadow
-  }
-
-  .subnav-main-title {
-    @apply mb-10 px-8 text-xl
-  }
-
-  .subnav-list{
-    @apply flex flex-col
-  }
-  
-
-  .subnav-item {
-    @apply flex items-center py-4 px-2 bg-subnavLink mb-1
-  }
-
-  .subnav-icon {
-    @apply h-6 text-gray px-3
-  }
-
-  .subnav-title {
-    @apply text-gray font-bold block
-  }
-
-  .subnav-text {
-    @apply text-gray text-xs
-  }
-
-  /* ---MAIN--- */
-
-  .main {
-    @apply flex flex-col p-12 max-h-screen overflow-hidden
-  }
-
-  .main-split {
-    @apply grid grid-cols-split
-  }
-
-  /* ---HEADER--- */
-
-  .header {
-    @apply flex justify-between items-center w-full mb-6
-  }
-
-  .header-sub {
-    @apply font-bold text-gray
-  }
-
-  .header-emoji {
-    @apply text-2xl ml-2
-  }
-  
 
   /* --MAIN-INNER-- */
 
@@ -143,7 +86,7 @@
   /* --CARD-- */
 
   .card {
-    @apply flex flex-col bg-white rounded-lg max-h-card
+    @apply flex flex-col bg-white rounded-lg
   }
 
   .card-header {
@@ -151,11 +94,11 @@
   }
 
   .card-title {
-    @apply font-light text-gray-dark text-xs
+    @apply font-light text-gray-700 text-xs
   }
 
   .card-icon {
-    @apply h-5 text-gray-dark mr-3
+    @apply h-5 text-gray-800 mr-3
   }
 
   .card-content {
@@ -169,41 +112,19 @@
   }
 
   .blog-article {
-    @apply border-b border-gray-light py-5
+    @apply border-b border-gray-300 py-5
   }
 
   .article-title {
-    @apply font-bold text-gray mb-1
+    @apply font-bold text-gray-500 mb-1
   }
 
   .article-date {
-    @apply inline-block text-xs border border-gray-light bg-gray-lightest rounded-full px-4 text-gray mb-3
+    @apply inline-block text-xs border border-gray-100 bg-gray-50 rounded-full px-4 text-gray-500 mb-3
   }
 
   .article-summary {
     @apply font-light opacity-50 text-sm
-  }
-
-  /* TERMINAL */
-
-  .card-terminal {
-    @apply bg-gray-darkest rounded-lg py-3 shadow-lg
-  }
-
-  .card-header-terminal {
-    @apply flex justify-between items-center pb-3 px-6 border-b border-gray-dark
-  }
-
-  .card-icon-terminal {
-    @apply h-6 text-gray-light mr-3
-  }
-
-  .card-title-terminal {
-    @apply text-white text-sm font-light text-gray-light
-  }
-  
-  .card-content-terminal {
-    @apply bg-gray-darkest px-6 mt-3
   }
 
   /* BUTTON */

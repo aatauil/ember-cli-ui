@@ -1,0 +1,6 @@
+@layer components {
+
+  .dashboard {
+    @apply flex-1 p-12
+  }
+}

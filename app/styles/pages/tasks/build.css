@@ -1,0 +1,35 @@
+@layer components {
+
+  .build {
+    @apply flex-1 max-h-screen overflow-hidden bg-white
+  }
+
+  .build-inner {
+    @apply w-full max-h-screen h-full overflow-auto flex flex-col
+  }
+
+  .build-split {
+    @apply flex flex-1 h-full
+  }
+
+  .build-split-left {
+    @apply flex-1 max-w-xs h-full bg-white border-r border-gray-200
+  }
+
+  .build-split-right {
+    @apply flex-1 h-full bg-gray-100 p-6 flex flex-col space-y-4
+  }
+
+  .build-toolbar {
+    @apply flex justify-between items-center
+  }
+
+  .build-actions {
+    @apply flex space-x-2
+  }
+
+  .build-command {
+    @apply  flex items-center justify-center px-8 h-full bg-gray-200 bg-opacity-50 text-gray-500 text-xs
+  }
+
+}

@@ -1,0 +1,67 @@
+@layer components {
+
+  .header {
+    @apply flex justify-between items-center w-full p-3 border-b border-gray-200
+  }
+
+  .header-inner {
+    @apply flex items-center space-x-4
+  }
+
+  .header-icon-square {
+    @apply w-10 h-10 bg-gray-100 flex items-center justify-center rounded
+  }
+
+  .header-icon {
+    @apply text-gray-600
+  }
+
+  .header-title {
+    @apply font-bold text-gray-900 text-xl
+  }
+
+  .header-title--light {
+    @apply font-medium
+  }
+
+  .header-text {
+    @apply font-bold text-gray-800
+  }
+
+  .header-emoji {
+    @apply text-2xl ml-2
+  }
+
+  .header-btn-group {
+    @apply flex
+  }
+}
+/*
+
+
+@layer components {
+
+  .header {
+    @apply flex justify-between items-center w-full mb-12
+  }
+
+  .header-head {
+    @apply flex flex-col
+  }
+
+  .header-title {
+    @apply text-5xl font-bold text-gray-900
+  }
+
+  .header-text {
+    @apply font-bold text-gray-800
+  }
+
+  .header-emoji {
+    @apply text-2xl ml-2
+  }
+
+  .header-btn-group {
+    @apply flex
+  }
+} */

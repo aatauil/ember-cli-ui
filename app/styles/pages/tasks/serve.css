@@ -1,0 +1,35 @@
+@layer components {
+
+  .serve {
+    @apply flex-1 max-h-screen overflow-hidden bg-white
+  }
+
+  .serve-inner {
+    @apply w-full max-h-screen h-full overflow-auto flex flex-col
+  }
+
+  .serve-split {
+    @apply flex flex-1 h-full
+  }
+
+  .serve-split-left {
+    @apply flex-1 max-w-xs h-full bg-white border-r border-gray-200
+  }
+
+  .serve-split-right {
+    @apply flex-1 h-full bg-gray-100 p-6 flex flex-col space-y-4
+  }
+
+  .serve-toolbar {
+    @apply flex justify-between items-center
+  }
+
+  .serve-actions {
+    @apply flex space-x-2
+  }
+
+  .serve-command {
+    @apply  flex items-center justify-center px-8 h-full bg-gray-200 bg-opacity-50 text-gray-500 text-xs
+  }
+
+}

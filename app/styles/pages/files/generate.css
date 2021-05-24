@@ -1,0 +1,38 @@
+@layer components {
+
+  .gen {
+    @apply flex-1 max-h-screen overflow-hidden bg-white
+  }
+
+  .gen-inner {
+    @apply w-full max-h-screen h-full overflow-auto flex flex-col
+  }
+
+  .gen-split {
+    @apply flex flex-1 h-full
+  }
+
+  .gen-split-left {
+    @apply flex-1 max-w-xs h-full bg-gray-50 border-r border-gray-200
+  }
+
+  .gen-split-right {
+    @apply flex-1 h-full bg-gray-100 p-6
+  }
+
+  .gen-list {
+    @apply flex flex-col flex-wrap divide-y divide-gray-200
+  }
+
+  .gen-list-item {
+    @apply bg-gray-50 p-3 cursor-pointer hover:bg-gray-100
+  }
+
+  .gen-list-item-title {
+    @apply font-medium
+  }
+
+  .gen-list-item-text {
+    @apply text-xs text-gray-500
+  }
+}
